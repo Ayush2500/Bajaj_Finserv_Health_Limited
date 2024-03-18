@@ -3,9 +3,9 @@ const app = express();
 const port = process.env.PORT || 3000; // Use environment variable for port
 
 // Replace with your actual user ID and details (optional)
-const userId = "john_doe_17091999";
-const email = "john@xyz.com";
-const rollNumber = "ABCD123";
+const userId = "ayush_goyal";
+const email = "ayush0335.be21@chitkara.edu.in";
+const rollNumber = "2110990335";
 
 app.post('/bfhl', (req, res) => {
   try {
@@ -51,5 +51,5 @@ app.post('/bfhl', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(Server listening on port ${port});
+  console.log(`Server listening on port ${port}`);
 });
