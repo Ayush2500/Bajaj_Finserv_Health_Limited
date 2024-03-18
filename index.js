@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000; // Use environment variable for port
+const port = 3000;
 
-// Replace with your actual user ID and details (optional)
 const userId = "ayush_goyal";
 const email = "ayush0335.be21@chitkara.edu.in";
 const rollNumber = "2110990335";
