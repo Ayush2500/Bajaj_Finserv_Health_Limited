@@ -1,9 +1,6 @@
-// Import required modules
 const express = require('express')
-// Initialize Express app
 const app = express();
 
-// Middleware for parsing JSON bodies
 app.use(express.json());
 
 // POST route for /bfhl
@@ -29,8 +26,7 @@ app.post('/bfhl', (req, res) => {
                 uppercaseAlphabets.push(element.toUpperCase());
             }
         });
-
-        // Construct response object
+        
         const response = {
             user_id: user_id.replace(/ /g, '_'),
             is_success: true,
@@ -41,7 +37,6 @@ app.post('/bfhl', (req, res) => {
             uppercase_alphabets: uppercaseAlphabets
         };
 
-        // Send response
         res.status(200).json(response);
     } catch (error) {
         // Handle exceptions gracefully
@@ -52,6 +47,9 @@ app.post('/bfhl', (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
